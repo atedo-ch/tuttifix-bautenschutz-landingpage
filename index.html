@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tuttifix - Risiko-Barometer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Font Face Declarations */
+        @font-face {
+            font-family: 'RehnRegular';
+            src: url('https://raw.githubusercontent.com/atedo-ch/tuttifix-brandassets/main/moretype%20-%20Rehn-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'RehnCondensedBold';
+            src: url('https://raw.githubusercontent.com/atedo-ch/tuttifix-brandassets/main/moretype%20-%20RehnCondensed-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'RehnRegular', sans-serif;
+            font-size: 16px;
+            color: #002441; /* brand-dark */
+            scroll-behavior: smooth;
+        }
+
+        /* Specific Typography Rules using the custom fonts */
+        .font-h1 { 
+            font-family: 'RehnCondensedBold', sans-serif; 
+            font-weight: bold; 
+            font-size: 58px; 
+            line-height: 1.1; 
+        }
+        .font-h2 { 
+            font-family: 'RehnCondensedBold', sans-serif; 
+            font-weight: bold; 
+            font-size: 30px; 
+            line-height: 1.2; 
+        }
+        .font-h3 { 
+            font-family: 'RehnCondensedBold', sans-serif; 
+            font-weight: bold; 
+            font-size: 18px; 
+            line-height: 1.3; 
+        }
+        
+        @media (max-width: 768px) {
+          .font-h1 { font-size: 46px; }
+          .font-h2 { font-size: 26px; }
+        }
+
+        .bg-brand-light-gray { background-color: #ececec; }
+
+        @keyframes scan-y {
+          0% { transform: translateY(0); }
+          100% { transform: translateY(600px); }
+        }
+        .animate-scan-y {
+          animation: scan-y 4s linear infinite;
+        }
+
+        /* Flip Card Utilities */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .preserve-3d {
+            transform-style: preserve-3d;
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                red: '#d51030',
+                dark: '#002441',
+                lightBlue: '#ccd3d9',
+                midBlue: '#99a8b3',
+                lightGray: '#ececec',
+              }
+            },
+            fontFamily: {
+              sans: ['RehnRegular', 'sans-serif'],
+              condensed: ['RehnCondensedBold', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body class="bg-white overflow-x-hidden">
+    <div id="root"></div>
+    <!-- Entry point for Vite build -->
+    <script type="module" src="/index.tsx"></script>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/147689950.js"></script>
+    <!-- End of HubSpot Embed Code -->
+</body>
+</html>

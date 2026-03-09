@@ -38,25 +38,25 @@ const SYSTEM_CARDS = [
   {
     title: 'Spanndraht Systeme',
     subtitle: 'Diskrete Abwehr für Fassaden.',
-    image: 'https://picsum.photos/seed/wire-deterrent/800/600',
+    image: 'https://www.tuttifix.ch/wp-content/storage5k/picture/2025/12/kabel_draht-11-851x638.webp?oext=jpg&media_id=2184&source_id=167',
     benefit: 'Unterstützt die Rechtssicherheit: Feine Edelstahldrähte verhindern das Landen durch Instabilität oder Impulse. Ideal für denkmalgeschützte Objekte und moderne Glasfassaden.'
   },
   {
     title: 'Vogelabwehrnetze',
     subtitle: 'Grossflächige Barrieren.',
-    image: 'https://picsum.photos/seed/bird-netting/800/600',
+    image: 'https://www.tuttifix.ch/wp-content/storage5k/picture/2025/12/netz_img_5656-851x639.webp?oext=jpg&media_id=2209&source_id=175',
     benefit: 'Fördert eine lückenlose Dokumentation: Schützt Balkone, Innenhöfe und industrielle Anlagen. Robuste, UV-beständige Materialien schaffen eine physische Sperre gegen Einflug und Nisten.'
   },
   {
     title: 'Vogelabwehrgitter',
     subtitle: 'Sicherung von Öffnungen.',
-    image: 'https://picsum.photos/seed/metal-mesh/800/600',
+    image: 'https://www.tuttifix.ch/wp-content/storage5k/picture/2025/12/netz_sonnenstorengitter_004-851x639.webp?oext=jpg&media_id=2201&source_id=171',
     benefit: 'Optimiert die Basis für Ihren Sorgfaltsnachweis: Verschliesst Storenkästen, Nischen und PV-Anlagen massgefertigt. Schützt zusätzlich vor Nagern und verhindert Schäden an Dämmung und Technik.'
   },
   {
     title: 'Vogelschutzspitzen',
     subtitle: 'Klassische Punkt-Abwehr.',
-    image: 'https://picsum.photos/seed/bird-spikes/800/600',
+    image: 'https://www.tuttifix.ch/wp-content/storage5k/picture/2016/03/teaser-taubenabwehr-851x576.webp?oext=jpg&media_id=1296&source_id=137',
     benefit: 'Konform zu aktuellen Verbandsstandards: Edelstahlspitzen auf UV-stabilen Trägern verhindern das Aufsitzen auf Simsen und Dachrinnen. Wartungsfrei und langlebig.'
   }
 ];
@@ -394,8 +394,8 @@ const App: React.FC = () => {
                   alt={logo.name} 
                   className={`${
                     logo.name.includes('Kanton') ? 'h-10 md:h-16' : 
-                    logo.name.includes('SBB') ? 'h-5 md:h-10' : 
-                    logo.name.includes('Sparhafen') ? 'h-4 md:h-8' : 'h-6 md:h-12'
+                    logo.name.includes('SBB') ? 'h-[26px] md:h-[52px]' : 
+                    logo.name.includes('Sparhafen') ? 'h-[21px] md:h-[42px]' : 'h-6 md:h-12'
                   } w-auto object-contain`}
                   referrerPolicy="no-referrer"
                 />
@@ -437,7 +437,10 @@ const App: React.FC = () => {
                         <img 
                           src={t.logoUrl} 
                           alt={t.company} 
-                          className="h-8 md:h-10 w-auto object-contain"
+                          className={`${
+                            t.company.includes('SBB') ? 'h-[42px] md:h-[52px]' : 
+                            t.company.includes('Sparhafen') ? 'h-[42px] md:h-[52px]' : 'h-8 md:h-10'
+                          } w-auto object-contain`}
                           referrerPolicy="no-referrer"
                         />
                       </div>
